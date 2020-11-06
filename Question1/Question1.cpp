@@ -4,7 +4,7 @@ using namespace std;
 
 int findMaxProfit(int numOfPredictedDays, vector<int> predictedSharePrices) {
     //code
-    cout<<numOfPredictedDays<<endl;
+ 
     return -1;
 }
 
