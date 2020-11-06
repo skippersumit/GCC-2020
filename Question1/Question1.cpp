@@ -3,9 +3,18 @@
 using namespace std;
 
 int findMaxProfit(int numOfPredictedDays, vector<int> predictedSharePrices) {
-    //code
- 
-    return -1;
+    int difference  = predictedSharePrices[1]-predictedSharePrices[0];
+
+    int miniElement =  predictedSharePrices[0];
+    for(int i=1;i<numOfPredictedDays;i++)
+    {
+        if(predictedSharePrices[i]-miniElement > difference)
+            difference = predictedSharePrices[i]-miniElement;
+
+        if(predictedSharePrices[i]<miniElement)
+            miniElement= predictedSharePrices[i];
+    }
+    return difference;
 }
 
 vector<int> splitStringToInt(const string& str, char delim) {
